@@ -1,0 +1,12 @@
+.sideBar {
+  height: calc(100vh - var(--navbar-height));
+  width: 300px;
+  padding: 20px;
+  background: var(--inverted-bg-color);
+  transition: width 0.3s;
+  position: relative;
+}
+
+.closed {
+  width: 80px;
+}

@@ -1,0 +1,7 @@
+.AppLink {
+  color: var(--inverted-primary-color);
+}
+
+:global(.active) {
+  color: red;
+}
