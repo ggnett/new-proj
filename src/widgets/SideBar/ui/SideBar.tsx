@@ -11,7 +11,7 @@ export function SideBar() {
     };
     return (
         <div className={cn(style.sideBar, { [style.closed]: closed })}>
-            <button onClick={toogle}>asd</button>
+            <button type="button" onClick={toogle}>asd</button>
             <ThemeButton />
         </div>
     );

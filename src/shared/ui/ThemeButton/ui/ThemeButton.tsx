@@ -20,7 +20,7 @@ export function ThemeButton() {
     };
 
     return (
-        <button className={cn(style.butTheme)} onClick={togleTheme}>
+        <button type="button" className={cn(style.butTheme)} onClick={togleTheme}>
             {theme === 'light' ? <Sun /> : <Moon />}
         </button>
     );
