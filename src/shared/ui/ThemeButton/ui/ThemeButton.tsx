@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Sun from 'shared/icons/sun 40x40.svg';
 import Moon from 'shared/icons/moon 40x40.svg';
 
@@ -8,6 +8,10 @@ import * as style from './ThemeButton.module.css';
 
 export function ThemeButton() {
     const { theme, setTheme } = useContext(ThemeContext);
+
+    useEffect(() => {
+        throw new Error();
+    }, [theme]);
 
     const togleTheme = () => {
         if (theme === 'light') {
