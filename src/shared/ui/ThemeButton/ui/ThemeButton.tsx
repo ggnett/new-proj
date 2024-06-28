@@ -9,10 +9,6 @@ import * as style from './ThemeButton.module.css';
 export function ThemeButton() {
     const { theme, setTheme } = useContext(ThemeContext);
 
-    useEffect(() => {
-        throw new Error();
-    }, [theme]);
-
     const togleTheme = () => {
         if (theme === 'light') {
             localStorage.setItem('theme', 'dark');
