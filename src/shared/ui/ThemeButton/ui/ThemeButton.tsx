@@ -1,9 +1,10 @@
-import React, { useContext, useEffect } from 'react';
-import Sun from 'shared/icons/sun 40x40.svg';
-import Moon from 'shared/icons/moon 40x40.svg';
+import { useContext } from 'react';
 
-import { ThemeContext } from 'app/provaiders/themeprovaider';
 import cn from 'classnames';
+// import { ThemeContext } from 'app/provaiders/themeprovaider/index';
+import { ThemeContext } from '../../../../app/provaiders/themeprovaider/ui/theme.context';
+import Moon from '../../../icons/moon 40x40.svg';
+import Sun from '../../../icons/sun 40x40.svg';
 import * as style from './ThemeButton.module.css';
 
 export function ThemeButton() {

@@ -1,6 +1,5 @@
-import {
-    FC, PropsWithChildren, ReactElement, createContext, useMemo, useState,
-} from 'react';
+// eslint-disable-next-line object-curly-newline
+import { createContext, useMemo, useState } from 'react';
 
 const themeLocal = localStorage.getItem('theme') || 'light';
 
@@ -9,7 +8,7 @@ export const ThemeContext = createContext({
     setTheme: (theme: string) => {},
 });
 
-export const ThemeProvider = ({ children }: {children: React.ReactNode}) => {
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const [theme, setTheme] = useState(themeLocal);
 
     const defaultProps = useMemo(
@@ -17,7 +16,8 @@ export const ThemeProvider = ({ children }: {children: React.ReactNode}) => {
             theme,
             setTheme,
         }),
-        [theme],
+        // eslint-disable-next-line comma-dangle
+        [theme]
     );
 
     return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;

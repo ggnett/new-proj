@@ -1,14 +1,26 @@
 /**
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
+ *
+ *
  */
 
 /** @type {import('jest').Config} */
 const config = {
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
-    moduleDirectories: ['node_modules'],
+    setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
+    moduleDirectories: ['node_modules', 'src'],
     moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'],
+    modulePaths: ['node_modules', '<rootDir>'],
+    transform: {
+        '\\.[jt]sx?$': 'babel-jest',
+    },
+    moduleNameMapper: {
+        '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules',
+        '^.+\\.svg$': '<rootDir>/src/shared/jestEmptyComponent',
+    },
+
     // testMatch: ['src/**/*(*.)@(spec|test).[tj]s?(x)'],
     // All imported modules in your tests should be mocked automatically
     // automock: false,

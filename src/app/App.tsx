@@ -6,7 +6,7 @@ import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
 import { AppRouter } from './provaiders/router';
 
-export default function App() {
+export function App() {
     const { theme } = useContext(ThemeContext);
 
     return (
