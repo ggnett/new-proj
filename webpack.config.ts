@@ -7,6 +7,11 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 const config: webpack.Configuration = {
     mode: 'development',
     entry: './src/index.tsx',
+    plugins: [
+        new HtmlWebpackPlugin({ template: './public/index.html' }),
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({ filename: 'style.css' }),
+    ],
     module: {
         rules: [
             {
@@ -17,12 +22,18 @@ const config: webpack.Configuration = {
             {
                 test: /\.css$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                          defaultExport: true,
+                        },
+                      },
                     {
                         loader: 'css-loader',
                         options: {
                             modules: {
                                 auto: (resPath: string) => Boolean(resPath.includes('.module.css')),
+                                namedExport: true,
                             },
                         },
                     },
@@ -44,11 +55,7 @@ const config: webpack.Configuration = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
-    plugins: [
-        new HtmlWebpackPlugin({ template: './public/index.html' }),
-        new webpack.ProgressPlugin(),
-        new MiniCssExtractPlugin({ filename: 'style.css' }),
-    ],
+    
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',

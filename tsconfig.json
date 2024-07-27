@@ -12,12 +12,14 @@
         "baseUrl": ".",
         "paths": {
             "*": ["./src/*"]
-        }
+        },
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
     "ts-node": {
         "compilerOptions": {
-            "module": "CommonJS"
+            "module": "CommonJS",
+            "plugins": [{ "name": "typescript-plugin-css-modules" }]
         }
     },
-    "include": ["jest-setup.ts", "src", "types"]
+    "include": ["jest-setup.ts", "src", "types", "typings.d.ts"]
 }
