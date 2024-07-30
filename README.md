@@ -5,5 +5,7 @@
 "lint:css": "npx stylelint \"\*\*/_.css\"",
 "lint:css:fix": "npx stylelint \"\*_/_.css\" --fix"
 "storybook": "storybook dev -p 6006",
+"loki:test": "npx loki test",
+"loki:done": "npx loki approve"
 
     npx jest
