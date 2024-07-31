@@ -7,5 +7,6 @@
 "storybook": "storybook dev -p 6006",
 "loki:test": "npx loki test",
 "loki:done": "npx loki approve"
+"unit": "jest --config ./jest.config.js"
 
     npx jest

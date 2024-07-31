@@ -18,8 +18,8 @@ jobs:
             - name: install modules
               run: npm install
             - name: linting type script
-              run: npx eslint \"src/**/*.{ts,tsx,jsx,js}\"
+              run: npm run lint:ts
             - name: linting css
-              run: npx stylelint \"**/*.css\"
+              run: npm run lint:css
             - name: unit testing
-              run: jest --config ./jest.config.js
+              run: npm run unit
