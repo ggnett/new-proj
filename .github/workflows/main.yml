@@ -16,7 +16,7 @@ jobs:
               with:
                   node-version: ${{matrix.node-version}}
             - name: install modules
-              run: npm install 
+              run: npm install  i -D --force
             - name: linting type script
               run: npx eslint \"src/**/*.{ts,tsx,jsx,js}\"
             - name: linting css
