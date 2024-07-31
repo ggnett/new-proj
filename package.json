@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.ts",
     "scripts": {
-        "unit": "jest --config ./jest.config.js",
+        "unit": "jest --config ./jest.config.ts",
         "build": "webpack",
         "start": "webpack serve",
         "lint:ts": "npx eslint \"src/**/*.{ts,tsx,jsx,js}\"",
