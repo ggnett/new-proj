@@ -99,6 +99,7 @@
     "stylelint-config-standard": "^36.0.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0"
   },
+  "overrides": { "loki": { "@storybook/react": "$@storybook/react" } },
   "loki": {
     "configurations": {
       "chrome.laptop": {
