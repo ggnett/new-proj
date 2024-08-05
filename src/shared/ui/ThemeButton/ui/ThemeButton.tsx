@@ -8,6 +8,11 @@ import { ThemeContext } from '../../../../app/provaiders/themeprovaider/ui/theme
 import style from './ThemeButton.module.css';
 // import './ThemeButton.css'
 
+// eslint-disable-next-line no-lone-blocks
+{
+    /* props themeB dlia raboti storybook */
+}
+
 export function ThemeButton({ children = '', themeB = '' }) {
     const { theme, setTheme } = useContext(ThemeContext);
 

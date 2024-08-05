@@ -12,7 +12,6 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
-    // backgroundColor: { control: 'red' },
     },
     // @ts-ignore
     args: { onClick: fn() },
@@ -24,12 +23,10 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {
         themeB: styles.butTheme,
-    // primary: 'red',
-    // label: 'ThemeButton',
     },
 };
 
-export const PrimaryLongName: Story = {
+export const PrimaryBackgroundColor: Story = {
     args: {
         ...Primary.args,
         themeB: styles.red,

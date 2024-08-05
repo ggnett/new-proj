@@ -10,3 +10,36 @@
 .closed {
   width: 80px;
 }
+
+.btnHide {
+  width: 32px;
+  height: 32px;
+  font: 32px;
+  font-weight: 900;
+  border: none;
+  position: absolute;
+  bottom: 32px;
+  right: -32px;
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+}
+
+.links {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+}
+
+.linksRoute {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.linkHiden {
+  opacity: 0;
+  width: 0;
+}

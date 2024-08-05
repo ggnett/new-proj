@@ -6,9 +6,9 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  background-color: transparent;
 }
 
 .red {
-  padding: 20px;
-  right: 100px;
+  background-color: red;
 }
