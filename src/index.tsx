@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'app/provaiders/ErrorBoundary';
-import React from 'react';
 import { App } from './app/App';
 import { ThemeProvider } from './app/provaiders/themeprovaider/ui/theme.context';
+import './app/Styles/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

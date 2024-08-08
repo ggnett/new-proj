@@ -4,18 +4,13 @@ module.exports = {
         es2021: true,
     },
     extends: ['airbnb', 'plugin:storybook/recommended'],
-    plugins: [
-        'react',
-        'react-hooks',
-    ],
+    plugins: ['react', 'react-hooks', 'react-hooks'],
     overrides: [
         {
             env: {
                 node: true,
             },
-            files: [
-                '.eslintrc.{js,cjs}',
-            ],
+            files: ['.eslintrc.{js,cjs}'],
             parserOptions: {
                 sourceType: 'script',
             },
@@ -59,5 +54,6 @@ module.exports = {
         'jsx-a11y/label-has-associated-control': 'off',
         'default-case': 'off',
         'react/no-unknown-property': 'off',
+        'react-hooks/exhaustive-deps': 'error',
     },
 };

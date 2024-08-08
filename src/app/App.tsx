@@ -1,5 +1,4 @@
 import { Suspense, useContext, useState } from 'react';
-import './Styles/index.css';
 import { ThemeContext } from 'app/provaiders/themeprovaider/index';
 import cn from 'classnames';
 import { Navbar } from 'widgets/Navbar';

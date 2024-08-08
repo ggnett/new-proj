@@ -1,21 +1,23 @@
 import cn from 'classnames';
 
 import { AppLink } from 'shared/ui/AppLink/AppLink';
-import * as style from './Navbar.module.css';
+import Modal from 'shared/ui/Modal/Modal';
+import { useState } from 'react';
+import style from './Navbar.module.css';
 
 export function Navbar() {
+    const [visible, setVisible] = useState(false);
+
+    const clickLogin = () => {
+        setVisible(true);
+    };
+
     return (
         <div className={cn(style.navbar)}>
-            {/* <div className={cn(style.links)}>
-                <AppLink to="/" className={cn(style.mainLink)}>
-                    Главная
-                </AppLink>
-                <AppLink to="/about" className="">
-                    О сайте
-                </AppLink>
-            </div> */}
-            /
-            {/* ubral linki iz header */}
+            <Modal visible={visible} setVisible={setVisible} />
+            <button type="button" className={cn(style.btnEnter)} onClick={clickLogin}>
+                Войти
+            </button>
         </div>
     );
 }

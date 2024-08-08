@@ -5,7 +5,7 @@ import { ThemeButton } from 'shared/ui/ThemeButton';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import MainIcon from 'shared/icons/mainIcon32x32.svg';
 import ListIcon from 'shared/icons/listIcon32x32.svg';
-import * as style from './SideBar.module.css';
+import style from './SideBar.module.css';
 
 export function SideBar() {
     const [closed, setClosed] = useState(false);

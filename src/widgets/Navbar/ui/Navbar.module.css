@@ -3,14 +3,15 @@
   height: var(--navbar-height);
   background: var(--inverted-bg-color);
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 20px;
 }
 
-.mainLink {
-  margin-right: 15px;
-}
-
-.links {
-  margin-left: auto;
+.btnEnter {
+  color: var(--inverted-primary-color);
+  font-weight: 900;
+  background-color: inherit;
+  border: 2px solid;
+  cursor: pointer;
 }
