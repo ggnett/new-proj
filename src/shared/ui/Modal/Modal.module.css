@@ -9,7 +9,7 @@
   z-index: -1;
   pointer-events: none;
   transform: scale(0.2);
-  transition: transform 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .modalBack {

@@ -40,7 +40,7 @@ export default function Modal({ visible, setVisible }: any) {
         };
     }, [escPress, visible]);
 
-    if (!visible) return null;
+    // if (!visible) return null; instant otkritie pri etom!!
 
     return createPortal(
         <div className={cn(style.overlay, { [style.opened]: visible, [style.closed]: isClos })} onClick={modalClose}>

@@ -10,3 +10,5 @@
 "unit": "jest --config ./jest.config.ts"
 
     npx jest
+
+    tes -- snippet for tests
